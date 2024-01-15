@@ -1,0 +1,157 @@
+:root {
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-pink: hsl(275, 100%, 97%);
+  --clr-purple: hsl(292, 16%, 49%);
+  --clr-bright-purple: hsl(279, 51%, 50%);
+  --clr-dark-purple: hsl(292, 42%, 14%);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url("assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-color: var(--clr-pink);
+  padding: 1.5rem;
+  font-family: "Work Sans", sans-serif;
+  color: var(--clr-dark-purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--clr-white);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 1.5rem;
+  max-width: 530px;
+}
+
+hr {
+  border-top: 1px solid rgb(234, 234, 234);
+}
+
+.header {
+  display: flex;
+}
+
+.header img {
+  width: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+h2:hover {
+  color: var(--clr-bright-purple);
+  cursor: pointer;
+}
+
+.faq-question img {
+  margin-left: 1rem;
+}
+
+.img-minus {
+  display: none;
+}
+
+p {
+  display: none;
+  margin-top: 1rem;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question img {
+  margin-right: 1rem;
+}
+
+@media (min-width: 376px) {
+  body {
+    background-image: url("assets/images/background-pattern-desktop.svg");
+  }
+}
+
+@media (min-width: 600px) {
+  .card {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  .header img {
+    width: 2rem;
+  }
+}
